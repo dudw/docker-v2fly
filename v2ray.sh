@@ -59,6 +59,28 @@ unzip v2ray.zip && chmod +x v2ray v2ctl
 mv v2ray v2ctl /usr/bin/
 mv geosite.dat geoip.dat /usr/local/share/v2ray/
 mv config.json /etc/v2ray/config.json
+cat>/etc/v2ray/config.json<<EOF
+{
+    "inbounds": [
+        {
+            "port": 53080,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "b0fbf06d-1123-4691-8526-9ae07653f2d1"
+                    }
+                ]
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
+}
+EOF
 
 # Clean
 rm -rf ${PWD}/*
