@@ -73,7 +73,38 @@ cat>/etc/v2ray/config.json<<EOF
                         "id": "b0fbf06d-1123-4691-8526-9ae07653f2d1"
                     }
                 ]
-            }
+            },
+            "streamSettings": {
+	                "network": "tcp",
+	                "tcpSettings": {
+	                    "header": {
+	                        "type": "http",
+	                        "response": {
+	                            "version": "1.1",
+	                            "status": "200",
+	                            "reason": "OK",
+	                            "headers": {
+	                                "Content-Type": [
+	                                    "application/octet-stream",
+	                                    "video/mpeg",
+	                                    "application/x-msdownload",
+	                                    "text/html",
+	                                    "application/x-shockwave-flash"
+	                                ],
+	                                "Transfer-Encoding": [
+	                                    "chunked"
+	                                ],
+	                                "Connection": [
+	                                    "keep-alive"
+	                                ],
+	                                "Pragma": "no-cache"
+	                            }
+	                        }
+	                    }
+	                },
+	                "security": "none"
+	            }
+	        }
         }
     ],
     "outbounds": [
