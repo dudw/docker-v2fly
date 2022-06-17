@@ -64,7 +64,7 @@ cat>/etc/v2ray/config.json<<EOF
 {
     "inbounds": [
         {
-            "port": 53080,
+            "port": 80,
             "listen": "0.0.0.0",
             "protocol": "vmess",
             "settings": {
