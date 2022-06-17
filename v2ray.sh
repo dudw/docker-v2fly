@@ -58,7 +58,8 @@ echo "Prepare to use"
 unzip v2ray.zip && chmod +x v2ray v2ctl
 mv v2ray v2ctl /usr/bin/
 mv geosite.dat geoip.dat /usr/local/share/v2ray/
-mv config.json /etc/v2ray/config.json
+#mv config.json /etc/v2ray/config.json
+mkdir -p /etc/v2ray
 cat>/etc/v2ray/config.json<<EOF
 {
     "inbounds": [
